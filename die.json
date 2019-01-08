@@ -1,0 +1,42 @@
+{
+  "definitions": {},
+  "$schema": "",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "die",
+    "times"
+  ],
+  "properties": {
+    "die": {
+      "$id": "#/properties/die",
+      "type": "integer",
+      "title": "Die",
+      "description": "The number of sides the die has (e.g. d4, d6, d8, etc.)",
+      "default": 0,
+      "examples": [
+        6
+      ]
+    },
+    "times": {
+      "$id": "#/properties/times",
+      "type": "integer",
+      "title": "Times",
+      "description": "Number of dice to be rolled.",
+      "default": 0,
+      "examples": [
+        3
+      ]
+    },
+    "adjustment": {
+      "$id": "#/properties/adjustment",
+      "type": "integer",
+      "title": "Die Roll Adjustment",
+      "description": "An adjustment to the die roll adding to the roll is as simple as using the integer value. A penalty to the roll is a negative integer.",
+      "default": 0,
+      "examples": [
+        -1
+      ]
+    }
+  }
+}
