@@ -13,7 +13,6 @@
       "type": "integer",
       "title": "Die",
       "description": "The number of sides the die has (e.g. d4, d6, d8, etc.)",
-      "default": 0,
       "examples": [
         6
       ]
@@ -23,7 +22,6 @@
       "type": "integer",
       "title": "Times",
       "description": "Number of dice to be rolled.",
-      "default": 0,
       "examples": [
         3
       ]
@@ -33,9 +31,17 @@
       "type": "integer",
       "title": "Die Roll Adjustment",
       "description": "An adjustment to the die roll adding to the roll is as simple as using the integer value. A penalty to the roll is a negative integer.",
-      "default": 0,
       "examples": [
         -1
+      ]
+    },
+    "value": {
+      "$id": "#/properties/value",
+      "type": "integer",
+      "title": "Rolled Value",
+      "description": "The value(s) of dice rolled, added together, and adjusted."
+      "examples": [
+        12
       ]
     }
   }
