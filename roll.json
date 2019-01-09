@@ -1,64 +1,62 @@
 {
-	"definitions": {
-		"dice": {
-			"type": "object",
-			"required": [
-				"die",
-				"times"
-			],
-			"properties": {
-				"die": {
-					"$id": "#/properties/die",
-					"type": "integer",
-					"title": "Die",
-					"description": "The number of sides the die has (e.g. d4, d6, d8, etc.)",
-					"examples": [
-						6
-					]
-				},
-				"times": {
-					"$id": "#/properties/times",
-					"type": "integer",
-					"title": "Times",
-					"description": "Number of dice to be rolled.",
-					"examples": [
-						3
-					]
-				},
-				"adjustment": {
-					"$id": "#/properties/adjustment",
-					"type": "integer",
-					"title": "Die Roll Adjustment",
-					"description": "An adjustment to the die roll adding to the roll is as simple as using the integer value. A penalty to the roll is a negative integer.",
-					"examples": [
-						-1
-					]
-				},
-				"value": {
-					"$id": "#/properties/value",
-					"type": "integer",
-					"title": "Rolled Value",
-					"description": "The value of dice rolled, added together, and adjusted.",
-					"examples": [
-						12
-					]
-				}
-			}
-		}
-	},
-	"$schema": "",
-	"$id": "http://example.com/root.json",
-	"type": "object",
-	"required": [
-		"roll"
-	],
-	"properties": {
-		"roll": {
-			"$id": "#/properties/roll",
-			"type": "array",
-			"title": "Dice Rolls",
-			"description": "An array of dice to roll. Each set of rolled dice will be returned as a unique object with a calculated value.",
-			"$ref": "#/definitions/dice"
-		}
-	}
+  "definitions": {
+    "dice": {
+      "type": "object",
+      "required": [
+        "die",
+        "times"
+      ],
+      "properties": {
+        "die": {
+          "type": "integer",
+          "title": "Die",
+          "description": "The number of sides the die has (e.g. d4, d6, d8, etc.)",
+          "examples": [
+            6
+          ]
+        },
+        "times": {
+          "type": "integer",
+          "title": "Times",
+          "description": "Number of dice to be rolled.",
+          "examples": [
+            3
+          ]
+        },
+        "adjustment": {
+          "type": "integer",
+          "title": "Die Roll Adjustment",
+          "description": "An adjustment to the die roll adding to the roll is as simple as using the integer value. A penalty to the roll is a negative integer.",
+          "examples": [
+            -1
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "title": "Rolled Value",
+          "description": "The value of dice rolled, added together, and adjusted.",
+          "examples": [
+            12
+          ]
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "roll"
+  ],
+  "properties": {
+    "roll": {
+      "$id": "#/properties/roll",
+      "type": "array",
+      "title": "Dice Rolls",
+      "description": "An array of dice to roll. Each set of rolled dice will be returned as a unique object with a calculated value.",
+      "items": {
+        "$ref": "#/definitions/dice"
+      }
+    }
+  }
 }
