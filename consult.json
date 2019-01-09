@@ -1,0 +1,45 @@
+{
+  "definitions": {},
+  "$schema": "",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "consult"
+  ],
+  "properties": {
+    "consult": {
+      "$id": "#/properties/consult",
+      "type": "array",
+      "title": "Consult",
+      "description": "Consult is a quick lookup into an array of values after a Dice Roll.",
+      "items": {
+        "$id": "#/properties/consult/items",
+        "type": "object",
+        "required": [
+          "key",
+          "value"
+        ],
+        "properties": {
+          "key": {
+            "$id": "#/properties/consult/items/properties/key",
+            "type": "string",
+            "title": "Key",
+            "description": "The upper bounds of a Dice Roll (e.g. 20 without a preceeding object would be 1-20)",
+            "examples": [
+              "20"
+            ]
+          },
+          "value": {
+            "$id": "#/properties/consult/items/properties/value",
+            "type": "string",
+            "title": "Value",
+            "description": "The lookup value that corresponds to the Dice Roll range",
+            "examples": [
+              "3"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
