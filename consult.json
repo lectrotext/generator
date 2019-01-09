@@ -1,5 +1,15 @@
 {
-  "definitions": {},
+  "definitions": {
+    "value": {
+      "$id": "#/properties/value",
+      "type": "string",
+      "title": "Value",
+      "description": "A simple value object used when there is not a complex generation task to undertake",
+      "examples": [
+        "Empathy"
+      ]
+    }
+  },
   "$schema": "",
   "$id": "http://example.com/root.json",
   "type": "object",
@@ -30,13 +40,7 @@
             ]
           },
           "value": {
-            "$id": "#/properties/consult/items/properties/value",
-            "type": "string",
-            "title": "Value",
-            "description": "The lookup value that corresponds to the Dice Roll range",
-            "examples": [
-              "3"
-            ]
+            "ref": "#/definitions/value"
           }
         }
       }

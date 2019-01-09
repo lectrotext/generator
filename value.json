@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "value"
+  ],
+  "properties": {
+    "value": {
+      "$id": "#/properties/value",
+      "type": "string",
+      "title": "Value",
+      "description": "A simple value object used when there is not a complex generation task to undertake"
+      "examples": [
+        "Empathy"
+      ]
+    }
+  }
+}
