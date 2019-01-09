@@ -39,7 +39,7 @@
       "$id": "#/properties/value",
       "type": "integer",
       "title": "Rolled Value",
-      "description": "The value(s) of dice rolled, added together, and adjusted."
+      "description": "The value(s) of dice rolled, added together, and adjusted.",
       "examples": [
         12
       ]

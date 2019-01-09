@@ -10,7 +10,7 @@
       "$id": "#/properties/value",
       "type": "string",
       "title": "Value",
-      "description": "A simple value object used when there is not a complex generation task to undertake"
+      "description": "A simple value object used when there is not a complex generation task to undertake",
       "examples": [
         "Empathy"
       ]
